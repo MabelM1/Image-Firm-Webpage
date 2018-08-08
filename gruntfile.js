@@ -1,5 +1,7 @@
 //The "wrapper" function
 module.exports = function(grunt) {
+	const sass = require("node-sass");
+
 	//Project and task configuration
 	grunt.initConfig({
 		pkg: grunt.file.readJSON("package.json"),
