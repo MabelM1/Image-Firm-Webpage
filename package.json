@@ -1,0 +1,21 @@
+{
+  "name": "sample-business-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bourbon": "^5.1.0",
+    "express": "^4.16.3",
+    "grunt": "^1.0.3",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.0.1",
+    "load-grunt-tasks": "^4.0.0",
+    "node-sass": "^4.9.2",
+    "normalize.css": "^8.0.0"
+  }
+}
