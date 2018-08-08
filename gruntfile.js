@@ -17,6 +17,30 @@ module.exports = function(grunt) {
 					"public/css/styles.css": "assets/scss/styles.scss"
 				}
 			}
+		},
+
+		//GRUNT CONTRIB WATCH
+		watch: {
+			sass: {
+				files: ["assets/scss/*.scss"],
+				tasks: ["sass"]
+			},
+			scripts: {
+				files: ["assets/js/*.js"],
+				tasks: ["uglify"]
+			}
+		},
+
+		//GRUNT CONTRIB UGLIFY
+		uglify: {
+			my_target: {
+				files: {
+					"public/js/scripts.js": [
+						"assets/js/scripts.js",
+						"node_modules/jquery/dist/jquery.js"
+					]
+				}
+			}
 		}
 	});
 
@@ -24,5 +48,5 @@ module.exports = function(grunt) {
 	require("load-grunt-tasks")(grunt);
 
 	// Default task(s).
-	grunt.registerTask("default", []);
+	grunt.registerTask("default", ["watch"]);
 };
