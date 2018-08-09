@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".hamburger-menu-top").click(function(a){a.stopPropagation(),$(".main-nav").hasClass("active")?($(".main-nav").removeClass("active"),console.log("close")):($(".main-nav").addClass("active"),console.log("open"))}),$(window).resize(function(){480<$(window).width()&&$(".main-nav").removeClass("active")})});

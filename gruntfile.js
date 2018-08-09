@@ -10,7 +10,8 @@ module.exports = function(grunt) {
 		sass: {
 			options: {
 				implementation: sass,
-				sourceMap: false
+				sourceMap: false,
+				includePaths: require("bourbon").includePaths
 			},
 			dist: {
 				files: {
@@ -22,7 +23,7 @@ module.exports = function(grunt) {
 		//GRUNT CONTRIB WATCH
 		watch: {
 			sass: {
-				files: ["assets/scss/*.scss"],
+				files: ["assets/scss/**/*.scss"],
 				tasks: ["sass"]
 			},
 			scripts: {
@@ -35,10 +36,7 @@ module.exports = function(grunt) {
 		uglify: {
 			my_target: {
 				files: {
-					"public/js/scripts.js": [
-						"assets/js/scripts.js",
-						"node_modules/jquery/dist/jquery.js"
-					]
+					"public/js/scripts.js": ["assets/js/scripts.js"]
 				}
 			}
 		}
