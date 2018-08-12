@@ -17,3 +17,30 @@ $textLight: $snow;
 /*Fonts*/
 $mainFont: "Prata", serif;
 $headingsFont: "Paytone One", sans-serif;
+
+/*Breakpoints*/
+$small: 480px;
+$medium: 640px;
+$large: 960px;
+
+
+@mixin large {
+  @media (min-width: #{$large}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$medium}) {
+    @content;
+  }
+}
+
+
+@mixin small {
+  @media (min-width: #{$small}) {
+    @content;
+  }
+}
+
+

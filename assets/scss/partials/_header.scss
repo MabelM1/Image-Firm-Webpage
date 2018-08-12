@@ -2,12 +2,30 @@ header {
 	position: relative;
 	width: 100%;
 
-	@media only screen and (min-width: 480px) {
+	@include small {
 		position: absolute;
 	}
 
 	.main-nav {
 		display: none;
+
+		@include small {
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: center;
+			margin: 0;
+			padding: 1em 0;
+
+			li {
+				flex: 1;
+
+				a {
+					color: $textDark;
+					padding: 0.2em;
+					font-size: 1.5em;
+				}
+			}
+		}
 	}
 
 	.hamburger-menu-top {
@@ -18,7 +36,7 @@ header {
 		margin-right: 2em;
 		padding-top: 1.5em;
 
-		@media only screen and (min-width: 480px) {
+		@include small {
 			display: none;
 		}
 	}
@@ -42,26 +60,6 @@ header {
 			letter-spacing: 0.4em;
 			font-size: 22px;
 			text-transform: uppercase;
-		}
-	}
-
-	@media only screen and (min-width: 480px) {
-		.main-nav {
-			display: flex;
-			flex-wrap: nowrap;
-			justify-content: flex-start;
-			margin: 0;
-			padding-top: 1em;
-
-			li {
-				flex: 1;
-
-				a {
-					color: $textDark;
-					padding: 0.2em;
-					font-size: 1.5em;
-				}
-			}
 		}
 	}
 }
