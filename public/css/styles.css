@@ -299,6 +299,8 @@ template {
   display: none; }
 
 /* Color Palette*/
+/*Fonts*/
+/*Breakpoints*/
 :root {
   box-sizing: border-box; }
 
@@ -314,7 +316,7 @@ body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  font-family: "Paytone One", sans-serif; }
+  font-family: "Prata", serif; }
 
 .container {
   max-width: 940px;
@@ -328,11 +330,24 @@ nav ul li {
 header {
   position: relative;
   width: 100%; }
-  @media only screen and (min-width: 480px) {
+  @media (min-width: 480px) {
     header {
       position: absolute; } }
   header .main-nav {
     display: none; }
+    @media (min-width: 480px) {
+      header .main-nav {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        margin: 0;
+        padding: 1em 0; }
+        header .main-nav li {
+          flex: 1; }
+          header .main-nav li a {
+            color: #07070a;
+            padding: 0.2em;
+            font-size: 1.5em; } }
   header .hamburger-menu-top {
     display: block;
     float: right;
@@ -340,7 +355,7 @@ header {
     height: 2em;
     margin-right: 2em;
     padding-top: 1.5em; }
-    @media only screen and (min-width: 480px) {
+    @media (min-width: 480px) {
       header .hamburger-menu-top {
         display: none; } }
   header .main-nav.active {
@@ -360,19 +375,6 @@ header {
       letter-spacing: 0.4em;
       font-size: 22px;
       text-transform: uppercase; }
-  @media only screen and (min-width: 480px) {
-    header .main-nav {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      margin: 0;
-      padding-top: 1em; }
-      header .main-nav li {
-        flex: 1; }
-        header .main-nav li a {
-          color: #07070a;
-          padding: 0.2em;
-          font-size: 1.5em; } }
 
 .hero {
   height: 100vh;
@@ -380,6 +382,11 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
+  @media (min-width: 480px) {
+    .hero .container {
+      display: flex;
+      align-items: center;
+      height: 100vh; } }
   .hero .hero-text {
     max-width: 200px; }
     .hero .hero-text p {
@@ -390,14 +397,16 @@ header {
       letter-spacing: 4px;
       padding-left: 0.5em;
       padding-top: 0.6em;
-      margin: 0;
-      font-family: "Prata", serif; }
-  @media only screen and (min-width: 480px) {
-    .hero .container {
-      display: flex;
-      align-items: center;
-      height: 100vh; }
-    .hero .hero-text p {
-      font-size: 3em;
-      font-weight: 700;
-      padding-right: 1.5em; } }
+      margin: 0; }
+      @media (min-width: 480px) {
+        .hero .hero-text p {
+          font-size: 3em;
+          font-weight: 700;
+          padding-right: 1.5em; } }
+
+.about-text {
+  padding: 0 2.5em; }
+  .about-text p {
+    line-height: 2;
+    letter-spacing: 2px;
+    font-weight: 300; }

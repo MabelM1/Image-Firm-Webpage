@@ -9,6 +9,14 @@
 	background-size: cover;
 	background-position: center;
 
+	.container {
+		@include small {
+			display: flex;
+			align-items: center;
+			height: 100vh;
+		}
+	}
+
 	.hero-text {
 		max-width: 200px;
 
@@ -21,19 +29,8 @@
 			padding-left: 0.5em;
 			padding-top: 0.6em;
 			margin: 0;
-			font-family: "Prata", serif;
-		}
-	}
 
-	@media only screen and (min-width: 480px) {
-		.container {
-			display: flex;
-			align-items: center;
-			height: 100vh;
-		}
-
-		.hero-text {
-			p {
+			@include small {
 				font-size: 3em;
 				font-weight: 700;
 				padding-right: 1.5em;

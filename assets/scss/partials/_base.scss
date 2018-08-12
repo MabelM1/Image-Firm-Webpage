@@ -15,7 +15,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	overflow-x: hidden;
-	font-family: "Paytone One", sans-serif;
+	font-family: $mainFont;
 }
 
 .container {
@@ -23,14 +23,12 @@ body {
 	margin: 0 auto;
 }
 
-nav {
-	ul {
-		li {
-			list-style: none;
+nav ul {
+	li {
+		list-style: none;
 
-			a {
-				text-decoration: none;
-			}
+		a {
+			text-decoration: none;
 		}
 	}
 }
