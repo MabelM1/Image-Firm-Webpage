@@ -405,8 +405,9 @@ header {
           padding-right: 1.5em; } }
 
 .about-text {
-  padding: 0 2.5em; }
+  padding: 3em 2.5em; }
   .about-text p {
     line-height: 2;
     letter-spacing: 2px;
-    font-weight: 300; }
+    font-weight: 300;
+    color: #07070a; }
